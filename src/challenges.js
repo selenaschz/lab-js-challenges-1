@@ -28,8 +28,17 @@ function howManyTimes(words, wordToSearch) {
 
 
 // Iteration 2 | Number Sequence
-function createSequence() {
+function createSequence(n) {
+  if (n === 0) {
+    return [];
+  }
 
+  const numbers = [];
+  for (let i = 0; i <= n; i++) {
+      const number = i;
+      numbers.push(number);
+  }
+  return numbers;
 }
 
 
