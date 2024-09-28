@@ -13,13 +13,24 @@ const repeatedWords = [
   "matter"
 ];
 
-function howManyTimes() {}
+function howManyTimes(words, wordToSearch) {
+  let counter = 0;
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i];
+    if (word === wordToSearch) {
+      counter++;
+    }
+  }
+  return counter;
+}
 
 
 
 
 // Iteration 2 | Number Sequence
-function createSequence() {}
+function createSequence() {
+
+}
 
 
 
