@@ -58,12 +58,35 @@ function multiplyBy(numbers, multiplier) {
 
 
 
-
 // Iteration 4 | Filter Out
 const original = ["cat", "dog", "fish", "bird", "cat", "fish"];
 const toRemove = ["cat", "dog"];
 
-function filterOut() {}
+function filterOut(original, toRemove) {
+  if (original.length < 1) {
+    return null;
+  } else if (toRemove.length < 1) {
+    return original;
+  }
+
+  const stringFilter = original.slice(); //Copy original
+
+  //Loop through toRemove array
+  for (let i = 0; i < toRemove.length; i++) {
+    const itemRemove = toRemove[i];
+    //Loop through stringFilter array 
+    for (let j = stringFilter.length -1; j >= 0; j--) {
+      const itemOriginal = stringFilter[j];
+
+      if (itemOriginal === itemRemove) {
+        stringFilter.splice(j, 1); //If the values are equals, remove these element
+      }
+    }
+  }
+  return stringFilter; 
+}
+
+console.log(filterOut(["cat", "dog", "fish", "bird", "cat", "fish"], ["cat", "dog"]));
 
 
 
