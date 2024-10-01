@@ -86,10 +86,6 @@ function filterOut(original, toRemove) {
   return stringFilter; 
 }
 
-console.log(filterOut(["cat", "dog", "fish", "bird", "cat", "fish"], ["cat", "dog"]));
-
-
-
 
 // Iteration 5 | Unique Arrays
 const duplicateWords = [
@@ -106,12 +102,28 @@ const duplicateWords = [
   "bring"
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(duplicateWords) {
+  //If receives an empty array, return null:
+  if (duplicateWords.length < 1) {
+    return null;
+  }
+  //Object to store the words:
+  const objectWords = {};
+  
+  //Loop through duplicateWords array, and add the words as properties:
+  for(let i = 0; i < duplicateWords.length; i++) {
+    const word = duplicateWords[i];
+    objectWords[word] = undefined;
+  }
+
+  //Object.keys returns an array with the object's properties:
+  return Object.keys(objectWords);
+}
 
 
 
 
-// Bonus: Iteration 6 | Product of Adjacent Numbers
+/*// Bonus: Iteration 6 | Product of Adjacent Numbers
 const matrix = [
   [8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
   [49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 4, 56, 62, 0],
@@ -135,4 +147,4 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() {}
+function greatestProduct() {}*/
