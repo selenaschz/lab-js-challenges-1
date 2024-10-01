@@ -63,9 +63,9 @@ const original = ["cat", "dog", "fish", "bird", "cat", "fish"];
 const toRemove = ["cat", "dog"];
 
 function filterOut(original, toRemove) {
-  if (original.length < 1) {
+  if (original.length === 0) {
     return null;
-  } else if (toRemove.length < 1) {
+  } else if (toRemove.length === 0) {
     return original;
   }
 
@@ -104,7 +104,7 @@ const duplicateWords = [
 
 function uniquifyArray(duplicateWords) {
   //If receives an empty array, return null:
-  if (duplicateWords.length < 1) {
+  if (duplicateWords.length === 0) {
     return null;
   }
   //Object to store the words:
